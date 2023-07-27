@@ -190,8 +190,33 @@ export RK_ROOTFS_SYSTEM=debian
 
 <img width="723" alt="烧录截图2" src="https://github.com/bolubolu/Linux-5.10-gen-rkr4/assets/54768057/134f4b3f-fbb8-4c1d-be38-62200677a93a">
 
+## 5、ADB使用
 
+这里主要介绍windows下使用adb进行调试
 
+步骤：
+- 下载windows版本的adb.zip，解压到C:\adb
+- 配置环境变量：
+  
+  1、键盘按键：win + r
+  
+  2、打开“系统属性”窗口
+  
+  3、“高级”→“环境变量”→“系统变量”
+  
+  4、找到“Path”双击，新建，复制adb路径进去，点击“确定”按钮，添加成功
+  
+- 常用的adb命令
+```
+  adb help            //可查看所有命令
+  adb version
+  adb start-server     //启动adb服务
+  adb kill-server      //关闭adb服务
+  adb devices
+  adb shell
+  adb push [-p] <local> <remote>
+  adb pull [-p] [-a] <remote> [<local>]
+```
 
 
 
